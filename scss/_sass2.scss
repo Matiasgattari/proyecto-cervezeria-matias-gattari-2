@@ -1,4 +1,3 @@
-
 // Mixin
 
 @mixin titulo {
@@ -9,28 +8,33 @@
     text-align: center;
 }
 
-.tituloH1 {@include titulo}
+.tituloH1 {
+    @include titulo
+}
 
 // Extend 
 
-.parrafoCinco {
-    @extend .contenidoPrincipalElemento; text-shadow: 3px 3px 3px rgb(248, 89, 89);
+.video {
+    @extend .videoTitulo;
+    margin: 60px
 }
-
-.video {@extend .videoTitulo; margin:60px}
 
 // Maps
 
-$historiaEstilo: (colorText: $color-texto, tamFuente: 21px, alineacion:left);
+$historiaEstilo: (
+    colorText: $color-texto,
+    tamFuente: 21px,
+    alineacion:left
+);
 
 
 .historiaTexto {
-    font-size: map-get($historiaEstilo,tamFuente);
+    font-size: map-get($historiaEstilo, tamFuente);
     font-family: 'Kaushan Script', cursive;
-    color: map-get($historiaEstilo,colorText);
+    color: map-get($historiaEstilo, colorText);
     font-weight: bold;
     line-height: 50px;
-    text-align: map-get($historiaEstilo,alineacion);
+    text-align: map-get($historiaEstilo, alineacion);
     text-shadow: 3px 3px 3px black;
 
 }

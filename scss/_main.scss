@@ -1,4 +1,3 @@
-
 /* RESET */
 * {
     margin: 0;
@@ -25,6 +24,41 @@ h1 {
 
 }
 
+#miModal {
+    margin-top: 18%;
+    margin-bottom: auto;
+
+    div.colorModal {
+        background-color: #bb8bf1;
+
+        h5.tituloModal {
+            color: #FFE3FE;
+            text-transform: capitalize;
+            font-size: 35px;
+            font-family: 'Macondo', cursive;
+        }
+
+        p.textoModal {
+            color: $color-texto;
+
+            font-size: 21px;
+            font-family: 'Kaushan Script', cursive;
+            place-self: center;
+        }
+
+        button.colorBotonModal {
+            background-color: #9646f3;
+            opacity: 75%;
+            border-radius: 20px;
+            color: $color-texto;
+            font-size: 16px;
+            font-family: 'Kaushan Script', cursive;
+            place-self: center;
+
+        }
+    }
+
+}
 
 
 div.mainIndex {
@@ -33,8 +67,27 @@ div.mainIndex {
     flex-direction: column;
     align-items: center;
 
+    div.historiaPresentacion {
+        h2.tituloHistoria {
+            color: rgb(255, 220, 220);
+            font-size: 25px;
+            font-weight: bold;
+            line-height: inherit;
+            font-family: 'Kaushan Script', cursive;
+            text-align: left;
+            width: 85%;
+            margin: 20px;
+        }
+
+        p.texto {
+            width: 85%;
+            margin-left: 25px;
+        }
+
+    }
+
     .contacto {
-        color: rgb(255, 255, 255);
+        color: $color-texto;
         text-transform: capitalize;
         font-size: 25px;
         font-family: 'Kaushan Script', cursive;
@@ -99,10 +152,6 @@ div.mainIndex {
             grid-area: index4;
         }
 
-        // .index5 {
-        //     grid-area: index5;
-        // }
-
         .contenidoPrincipalElemento {
             display: inline-block;
             padding: 30px 30px 15px 10px;
@@ -146,6 +195,19 @@ div.mainIndex {
             "historia3 historia4"
         ;
 
+        .tituloHistoriaCont {
+
+            font-size: 25px;
+            font-weight: bold;
+            line-height: inherit;
+            font-family: 'Kaushan Script', cursive;
+            text-align: left;
+            margin: 20px;
+            color: rgb(243, 174, 237);
+            width: 95%;
+
+        }
+
         .historia1 {
             grid-area: historia1;
         }
@@ -160,15 +222,6 @@ div.mainIndex {
 
 
         }
-
-        // .historiaTexto {
-        //     font-size: 20px;
-        //     font-family: 'Kaushan Script', cursive;
-        //     color: blanchedalmond;
-        //     font-weight: bold;
-        //     line-height: 50px;
-
-        // }
 
         .historia3 {
             grid-area: historia3;
@@ -216,7 +269,8 @@ div.mainIndex {
             font-family: 'Kaushan Script', cursive;
             text-align: center;
             width: 85%;
-            margin: 20px;        }
+            margin: 20px;
+        }
 
     }
 
@@ -308,7 +362,7 @@ div.mainIndex {
         }
     }
 
-   
+
 
     .botonEnviar {
         border-radius: 25px;
@@ -411,4 +465,6 @@ div.mainIndex {
     }
 }
 
-.disclaimer { display: none;}
+.disclaimer {
+    display: none;
+}

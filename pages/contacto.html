@@ -106,12 +106,13 @@
                         <div class="contact-icon text-center">
                             <div class="single-icon"> <i class="bi bi-envelope"></i>
                                 <p class="contacto ">
-                                   
+
                                     <font style="vertical-align: inherit;">
                                         <font style="vertical-align: inherit;">cervezakon@gmail.com </font>
                                     </font><br> <span>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">https://cerveza-kon.netlify.app/</font>
+                                            <font style="vertical-align: inherit;">https://cerveza-kon.netlify.app/
+                                            </font>
                                         </font>
                                     </span>
                                 </p>
@@ -157,15 +158,17 @@
                                 <div class="my-3">
                                     <div class="loading loadingText">Cargando...</div>
                                     <div class="error-message"></div>
-                                    <div class="sent-message loadingText">Tu mensaje se envió! gracias por elegirnos</div>
+                                    <div class="sent-message loadingText">Tu mensaje se envió! gracias por elegirnos
+                                    </div>
                                 </div>
                                 <div class="text-center">
-                                    <button class="botonEnviar mt-5" type="submit">
+                                    <button class="botonEnviar mt-5" type="submit" data-bs-toggle="modal"
+                                        data-bs-target="#miModal">
                                         <font style="vertical-align: inherit;">
                                             <font style="vertical-align: inherit;">Enviar</font>
                                         </font>
                                     </button>
-                                <input type="reset" value="Borrar" class="botonEnviar mt-5">
+                                    <input type="reset" value="Borrar" class="botonEnviar mt-5">
                                 </div>
                             </form>
                         </div>
@@ -175,6 +178,33 @@
 
 
         </div>
+
+        <!-- MODAL -->
+
+        <div id="miModal" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content colorModal">
+                    <div class="modal-header">
+                        <h5 class="modal-title tituloModal">Mensaje enviado!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="textoModal">Gracias por interesarte en nosotros, nos estaremos contactando con vos en
+                            cualquier momento
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary colorBotonModal"
+                            data-bs-dismiss="modal">Ok!</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <div class="botonInicio text-end">
             <a href="#lista" class="inicio">Volver al inicio</a>
 
