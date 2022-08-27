@@ -256,7 +256,7 @@
     }
 
     .imagenbuho1 {
-        width: 85%;
+        display: none;
     }
 
     div.divBodyPrincipal div.divPrincipal div.tamañoPrincipal {
@@ -287,6 +287,10 @@
             "index1"
             "index3"
         ;
+    }
+
+    .parrafoBienvenida {
+        display: none;
     }
 
     div.mainIndex div.contenidoPrincipal p.contenidoPrincipalElemento {
