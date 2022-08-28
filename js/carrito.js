@@ -1,8 +1,4 @@
-// import {
-//     listaProductos
-// } from "./productos.js";
-
-// array vacio para ir cargando las compras al carrito
+// Array vacio para ir cargando las compras al carrito
 const carrito = [];
 
 const listaProductos = [];
@@ -43,20 +39,20 @@ Swal.fire({
 // Trayendo del localStorage el carrito guardado
  
 const carritoLocalStorage = JSON.parse(localStorage.getItem("carritoStorage"));
-// carritoLocalStorage = JSON.parse(carritoLocalStorage)
-console.log("console log carrito local storage")
-console.log(carritoLocalStorage)
+
+// console.log("console log carrito local storage")
+// console.log(carritoLocalStorage)
 
 
 
 // Tratando de mantener la funcionaldiad del carrito si el localStorage no esta vacio. NO PUEDO hacer que el carrito se me cargue con los datos de carritoLocalStorage
 if (carritoLocalStorage === [] || carritoLocalStorage === null) {
-    console.log("el carrito storage esta vacio");
+    // console.log("el carrito storage esta vacio");
     
 }else {
     carrito === carritoLocalStorage;
-    console.log("console log carrito ")
-    console.log(carrito)
+    // console.log("console log carrito ")
+    // console.log(carrito)
 };
 
 
@@ -66,100 +62,86 @@ function agregarAlCarrito(numero) {
 
 
     // Condicional IF para agregar las unidades al carrito por medio de pushearle las unidades pedidas
-
     if (numero === 1) {
-        console.log("selecciono producto 1");
-
+        // console.log("selecciono producto 1");
         if (carrito.includes(listaProductos[0])) {
-            // listaProductos[0].unidadesPedidas = listaProductos[0].unidadesPedidas + 1;
             listaProductos[0].unidadesPedidas++;
-            console.log("unidades 1 pedidassssss", listaProductos[0].unidadesPedidas)
+            // console.log("unidades 1 pedidassssss", listaProductos[0].unidadesPedidas)
         } else {
             carrito.push(listaProductos[0]);
             listaProductos[0].unidadesPedidas = listaProductos[0].unidadesPedidas + 1;
-            console.log("unidades 1 pedidassssss", listaProductos[0].unidadesPedidas)
+            // console.log("unidades 1 pedidassssss", listaProductos[0].unidadesPedidas)
         }
 
     } else if (numero === 2) {
-        console.log("selecciono producto 2");
+        // console.log("selecciono producto 2");
         if (carrito.includes(listaProductos[1])) {
-            // listaProductos[1].unidadesPedidas = listaProductos[1].unidadesPedidas + 1;
             listaProductos[1].unidadesPedidas++;
-            console.log("unidades 2 pedidassssss", listaProductos[1].unidadesPedidas)
+            // console.log("unidades 2 pedidassssss", listaProductos[1].unidadesPedidas)
         } else {
             carrito.push(listaProductos[1]);
-            // listaProductos[1].unidadesPedidas = listaProductos[1].unidadesPedidas + 1;
             listaProductos[1].unidadesPedidas++;
-            console.log("unidades 2 pedidassssss", listaProductos[1].unidadesPedidas)
+            // console.log("unidades 2 pedidassssss", listaProductos[1].unidadesPedidas)
         }
 
     } else if (numero === 3) {
-        console.log("selecciono producto 3");
+        // console.log("selecciono producto 3");
         if (carrito.includes(listaProductos[2])) {
-            // listaProductos[2].unidadesPedidas = listaProductos[2].unidadesPedidas + 1;
             listaProductos[2].unidadesPedidas++;
-            console.log("unidades 3 pedidassssss", listaProductos[2].unidadesPedidas)
+            // console.log("unidades 3 pedidassssss", listaProductos[2].unidadesPedidas)
         } else {
             carrito.push(listaProductos[2]);
-            // listaProductos[2].unidadesPedidas = listaProductos[2].unidadesPedidas + 1;
             listaProductos[2].unidadesPedidas++;
-            console.log("unidades 3 pedidassssss", listaProductos[2].unidadesPedidas)
+            // console.log("unidades 3 pedidassssss", listaProductos[2].unidadesPedidas)
         }
 
     } else if (numero === 4) {
-        console.log("selecciono producto 4");
+        // console.log("selecciono producto 4");
         if (carrito.includes(listaProductos[3])) {
-            // listaProductos[3].unidadesPedidas = listaProductos[3].unidadesPedidas + 1;
             listaProductos[3].unidadesPedidas++;
-            console.log("unidades 4 pedidassssss", listaProductos[3].unidadesPedidas)
+            // console.log("unidades 4 pedidassssss", listaProductos[3].unidadesPedidas)
         } else {
             carrito.push(listaProductos[3]);
-            // listaProductos[3].unidadesPedidas = listaProductos[3].unidadesPedidas + 1;
             listaProductos[3].unidadesPedidas++
-            console.log("unidades 4 pedidassssss", listaProductos[3].unidadesPedidas)
+            // console.log("unidades 4 pedidassssss", listaProductos[3].unidadesPedidas)
         }
 
     } else if (numero === 5) {
-        console.log("selecciono producto 5");
+        // console.log("selecciono producto 5");
         if (carrito.includes(listaProductos[4])) {
-            // listaProductos[4].unidadesPedidas = listaProductos[4].unidadesPedidas + 1;
             listaProductos[4].unidadesPedidas++;
-            console.log("unidades 5 pedidassssss", listaProductos[4].unidadesPedidas)
+            // console.log("unidades 5 pedidassssss", listaProductos[4].unidadesPedidas)
         } else {
             carrito.push(listaProductos[4]);
-            // listaProductos[4].unidadesPedidas = listaProductos[4].unidadesPedidas + 1;
             listaProductos[4].unidadesPedidas++;
-            console.log("unidades 5 pedidassssss", listaProductos[4].unidadesPedidas)
+            // console.log("unidades 5 pedidassssss", listaProductos[4].unidadesPedidas)
         }
 
     } else if (numero === 6) {
-        console.log("selecciono producto 6");
+        // console.log("selecciono producto 6");
         if (carrito.includes(listaProductos[5])) {
-        //    listaProductos[5].unidadesPedidas = listaProductos[5].unidadesPedidas + 1;
-           listaProductos[5].unidadesPedidas++;
-            console.log("unidades 6 pedidassssss", listaProductos[5].unidadesPedidas)
+            listaProductos[5].unidadesPedidas++;
+            // console.log("unidades 6 pedidassssss", listaProductos[5].unidadesPedidas)
         } else {
             carrito.push(listaProductos[5]);
-            // listaProductos[5].unidadesPedidas = listaProductos[5].unidadesPedidas + 1;
             listaProductos[5].unidadesPedidas++;
-            console.log("unidades 6 pedidassssss", listaProductos[5].unidadesPedidas)
+            // console.log("unidades 6 pedidassssss", listaProductos[5].unidadesPedidas)
         }
-
-
     } else {
-        console.log("producto no valido")
+        // console.log("producto no valido")
     };
 
     
 };
 
-// renderizado de productos de la pagina a partir de json y fetch
+
+// Renderizado de productos de la pagina a partir de json y fetch
 const cargar = async  ()=>{
 
     fetch("./data.json")
     .then(response  => response.json() )
     .then(data => {
-        console.log(data);
+        // console.log(data);
 
         data.forEach((producto) =>{
               listaProductos.push(new Productos(producto.codigo, producto.nombre, producto.precio, producto.cantidad, producto.unidadesPedidas))
@@ -168,7 +150,7 @@ const cargar = async  ()=>{
 
              for (const producto of listaProductos) {
                  let carritoCompras = document.createElement("div");
-                 console.log("log de carrito compras",carritoCompras)
+                //  console.log("log de carrito compras",carritoCompras)
                  carritoCompras.innerHTML = `
                  <div class="card m-5 ${producto.nombre} margenTarjetas ">
                      <div class="card-body contenedorTarjetas align-items-center justify-content-center d-flex flex-column">
@@ -178,7 +160,7 @@ const cargar = async  ()=>{
                           
                           <form id="idFormulario${producto.codigo}" class="align-items-center justify-content-center d-flex flex-column">
                             <input id="idInput${producto.codigo}" type="number" placeholder="Seleccione cantidad" class="m-2" required list="listaOpciones">
-                            <button type="submit" class="btn btn-primary mt-5 botonCarrito" id="boton${producto.codigo}"> Agregar al carrito</button>
+                            <button type="submit" class="btn btn-primary mt-5 botonCarrito estiloBoton border-light" id="boton${producto.codigo}"> Agregar al carrito</button>
                           </form>
              
                      </div>
@@ -194,7 +176,7 @@ const cargar = async  ()=>{
                  const botonCarrito = document.getElementById(`boton${producto.codigo}`);
                  botonCarrito.addEventListener("click", () => agregarAlCarrito(producto.codigo));
              
-                 //  sacarle default al form, no me funciona (agregue el input y el button a un form con id `form${producto.codigo}`)
+                 //  sacarle default al form
                  const form = document.getElementById(`idFormulario${producto.codigo}`);
                  form.addEventListener("click", (e) => {
                      e.preventDefault()
@@ -218,14 +200,11 @@ const cargar = async  ()=>{
                  botonCarrito.addEventListener("click", () => leerCantidad(idInput))
              
                  function leerCantidad() {
-                     console.log(idInput.value);
+                    //  console.log(idInput.value);
                      let cantidadPedida = idInput.value;
-                     console.log("cantidad pedida", cantidadPedida);
+                    //  console.log("cantidad pedida", cantidadPedida);
              
              
-                     // ternario FUNCIONAL reemplazando cadena de if de abajo. dejo silenciado porque me resulta mas practico leer de la otra forma
-                     // botonCarrito === boton1 ? listaProductos[0].unidadesPedidas = parseInt(cantidadPedida) + parseInt(listaProductos[0].unidadesPedidas) - 1 :  botonCarrito === boton2 ? listaProductos[1].unidadesPedidas = parseInt(cantidadPedida) + parseInt(listaProductos[1].unidadesPedidas) - 1 :botonCarrito === boton3 ? listaProductos[2].unidadesPedidas = parseInt(cantidadPedida) + parseInt(listaProductos[2].unidadesPedidas) - 1 : botonCarrito === boton4 ? listaProductos[3].unidadesPedidas = parseInt(cantidadPedida) + parseInt(listaProductos[3].unidadesPedidas) - 1 : botonCarrito === boton5 ? listaProductos[4].unidadesPedidas = parseInt(cantidadPedida) + parseInt(listaProductos[4].unidadesPedidas) - 1 : botonCarrito === boton6 ? listaProductos[5].unidadesPedidas = parseInt(cantidadPedida) + parseInt(listaProductos[5].unidadesPedidas) - 1 : console.log("fin");
-                     
                      if (botonCarrito === boton1) {
                          listaProductos[0].unidadesPedidas = parseInt(cantidadPedida) + parseInt(listaProductos[0].unidadesPedidas) - 1;
                      }
@@ -259,16 +238,13 @@ const cargar = async  ()=>{
     })
     // console.log("productosResponse response.json", productosResponse);
 
-
-    
-
 };
 
 cargar ();
 
 
 
-// Funcionalidad al boton de Ver carrito
+// Funcion de calculo del precio final del carrito de compras
 function renderizadoPrecio() {
     const carritoContenedor = document.getElementById("carrito");
 
@@ -283,6 +259,7 @@ function renderizadoPrecio() {
 
     let resultadoFinal = resultado1 + resultado2 + resultado3 + resultado4 + resultado5 + resultado6;
 
+    // Mensaje mostrando monto final de la compra
     const precioFinal = document.getElementById("precioFinal")
     precioFinal.innerHTML = ``;
     let precioParrafo = document.createElement(`div`)
@@ -292,6 +269,7 @@ function renderizadoPrecio() {
     carritoContenedor.append(precioParrafo);
 
 }
+
 
 
 // Funcion para "ver carrito de compras" 
@@ -312,10 +290,53 @@ function verCarrito() {
             <h4 class="m-3">Precio por unidad: $ ${elementos.precio} </h4>
             <h4 class="m-3">Codigo: ${elementos.codigo}</h4>
             <h4 class="m-3">Unidades: ${elementos.unidadesPedidas}</h4>
+            <button id="eliminarElemento${elementos.codigo}" class="eliminarElementoCarrito"> X </button>
         </div>
         `;
         carritoContenedor.append(contenidoCarrito);
+
+              
+        // Funcion para eliminar 1 elemento del carrito
+            
+            let eliminarElemento = document.getElementById(`eliminarElemento${elementos.codigo}`);
+            // console.log(`console log ELIMINAR ELEMENTOOOOOOOOOOOOOOO`, eliminarElemento.id);
+           
+            eliminarElemento.addEventListener("click", ()=> { 
+                if (eliminarElemento.id === "eliminarElemento1") {
+                    listaProductos[0].unidadesPedidas=0;
+                    carritoContenedor.classList.add("ocultar");
+                    verCarrito();
+                }
+                if (eliminarElemento.id === "eliminarElemento2") {
+                    listaProductos[1].unidadesPedidas=0;
+                    carritoContenedor.classList.add("ocultar");
+                    verCarrito();
+                }
+                if (eliminarElemento.id === "eliminarElemento3") {
+                    listaProductos[2].unidadesPedidas=0;
+                    carritoContenedor.classList.add("ocultar");
+                    verCarrito();
+                }
+                if (eliminarElemento.id === "eliminarElemento4") {
+                    listaProductos[3].unidadesPedidas=0;
+                    carritoContenedor.classList.add("ocultar");
+                    verCarrito();
+                }
+                if (eliminarElemento.id === "eliminarElemento5") {
+                    listaProductos[4].unidadesPedidas=0;
+                    carritoContenedor.classList.add("ocultar");
+                    verCarrito();
+                }
+                if (eliminarElemento.id === "eliminarElemento6") {
+                    listaProductos[5].unidadesPedidas=0;
+                    carritoContenedor.classList.add("ocultar");
+                    verCarrito();
+                }
+    
+            })
+        
     };
+
 
     localStorage.setItem("carritoStorage", JSON.stringify(carrito));
 
@@ -324,26 +345,24 @@ function verCarrito() {
 
     // creo el boton para cerrar el carrito
     let botonCerrarCarrito = document.createElement(`div`);
-    botonCerrarCarrito.innerHTML = `<button id="cerrarCarritoCompras" class="">Cerrar carrito</button>`;
+    botonCerrarCarrito.innerHTML = `<button id="cerrarCarritoCompras" class="estiloBoton">Cerrar carrito</button>`;
     carritoContenedor.append(botonCerrarCarrito);
 
     // Funcionalidad boton cerrar carrito
 
     let botonCerrarCarritoFuncion = document.getElementById(`cerrarCarritoCompras`);
     botonCerrarCarritoFuncion.addEventListener(`click`, ()=> {
-    
         carritoContenedor.classList.add("ocultar");
     })
 
     
     // creo el boton para eliminar el carrito y doy funcionalidad para vaciar
     let botonEliminarCarrito = document.createElement(`button`);
-    
+    botonEliminarCarrito.classList.add("estiloBoton");
     botonEliminarCarrito.innerHTML = "Eliminar";
     carritoContenedor.append(botonEliminarCarrito);
     botonEliminarCarrito.addEventListener("click", () => {
     carrito.length=0;
-    // precioParrafo.length=0
     carritoContenedor.classList.add("ocultar");
     listaProductos[0].unidadesPedidas=0;
     listaProductos[1].unidadesPedidas=0;
@@ -357,7 +376,6 @@ function verCarrito() {
 })
 
     
-
 };
 
 const verCarritoFinal = document.getElementById("verCarritoFinal");

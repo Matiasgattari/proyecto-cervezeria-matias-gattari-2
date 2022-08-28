@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../css/estilo.css">
 </head>
 
-<body class="historia">
+<body class="historia" id="lista">
     <header id="header">
 
         <!-- ejemplo navbar  -->
@@ -72,13 +72,14 @@
     </header>
 
     <main>
-
+        <h1 class="tituloH1">Adentrémonos en esta aventura juntos, sumate a Cerveza KON!</h1>
         <div class="d-flex  flex-row justify-content-evenly align-items-center m-5 flex-wrap">
 
             <div class="border-light border-5">
 
                 <!-- formulario de registro de usuarios -->
-                <form action="" id="formularioRegistro" class="formulariosRegistro d-flex flex-column flex-nowrap justify-content-around align-items-center ">
+                <form action="" id="formularioRegistro"
+                    class="formulariosRegistro d-flex flex-column flex-nowrap justify-content-around align-items-center ">
                     <h2 class="divCarritoLista">Completá el formulario de registro</h2>
                     <input type="text" placeholder="Usuario" required id="inputNombre" class="inputFormularioRegistro">
                     <input type="text" placeholder="Nombre completo" id="inputApellido" class="inputFormularioRegistro"
@@ -87,7 +88,8 @@
                         required>
                     <input type="text" placeholder="Contraseña" id="inputContrasenia" class="inputFormularioRegistro"
                         required>
-                    <input type="button" value="Registrar" id="registrar">
+                    <input type="button" value="Registrar" id="registrar" class="estiloBoton">
+
                 </form>
 
             </div>
@@ -95,22 +97,27 @@
             <!-- formulario de inicio de sesion -->
             <main id="main">
 
-                <form action="" id="formularioLogin" class="formularioLogin d-flex flex-column flex-nowrap justify-content-around align-items-center">
+                <form action="" id="formularioLogin"
+                    class="formularioLogin d-flex flex-column flex-nowrap justify-content-around align-items-center">
                     <h2 class="divCarritoLista">Ingresa tus datos y loguea!</h2>
                     <input type="text" placeholder="Usuario" class="inputTexto inputFormularioRegistro"
                         id="usuarioLogin">
-                    <input type="number" placeholder="Contraseña" class="inputTexto inputFormularioRegistro"
+                    <input type="text" placeholder="Contraseña" class="inputTexto inputFormularioRegistro"
                         id="contraseniaLogin">
-                    <button id="botonLogin"> Iniciar sesión </button>
+                    <button id="botonLogin" class="estiloBoton"> Iniciar sesión </button>
                 </form>
         </div>
 
+
+        <div class="botonInicio text-end">
+            <a href="#lista" class="inicio">Volver al inicio</a>
+        </div>
     </main>
 
 
 
-    <footer>
-
+    <footer class="footer" id="footer1">
+        Sitio web creado por <strong>Matías Gattari</strong> para cerveza KON, derechos reservados.
     </footer>
 
     <!-- vincular js de libreria sweet alert  -->
@@ -123,7 +130,6 @@
     </script>
 
     <script src="../registro.js"></script>
-    <script src="../inicio-sesion.js"></script>
 </body>
 
 </html>

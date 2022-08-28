@@ -33,7 +33,7 @@ registrar.addEventListener("click", () => {
 
     let inputContrasenia = document.getElementById("inputContrasenia");
     let inputContraseniaValor = inputContrasenia.value;
-    
+
 
 
     // funcion constructora de usuarios
@@ -74,49 +74,45 @@ const botonLogin = document.getElementById(`botonLogin`);
 
 botonLogin.addEventListener(`click`, () => {
 
-// trayendo valores del localStorage como array
-let usuariosStorage = JSON.parse(localStorage.getItem("usuarios"));
-console.log(usuariosStorage);
+    // trayendo valores del localStorage como array
+    let usuariosStorage = JSON.parse(localStorage.getItem("usuarios"));
+    console.log(usuariosStorage);
 
- let usuarioLogin = document.getElementById(`usuarioLogin`);
- let usuarioLoginValor = usuarioLogin.value;
- let contraseniaLogin = document.getElementById(`contraseniaLogin`);
- let contraseniaLoginValor = contraseniaLogin.value
+    let usuarioLogin = document.getElementById(`usuarioLogin`);
+    let usuarioLoginValor = usuarioLogin.value;
+    let contraseniaLogin = document.getElementById(`contraseniaLogin`);
+    let contraseniaLoginValor = contraseniaLogin.value
 
-console.log(`log de valor usuario`,usuarioLoginValor);
-console.log(`log de valor contrasenia`,contraseniaLoginValor);
-   
-// validacion de que el nombre de usuario y contrasenia estan en el localStorage, por medio de forEach
-const search = element => element.nombre === usuarioLoginValor;
-console.log(`prueba find usuarioStorage`)
-console.log(usuariosStorage.find(search));
-let usuarioEncontrado = usuariosStorage.find(search);
-console.log(`log de usuarioEncontrado`, usuarioEncontrado);
+    console.log(`log de valor usuario`, usuarioLoginValor);
+    console.log(`log de valor contrasenia`, contraseniaLoginValor);
+
+    // validacion de que el nombre de usuario y contrasenia estan en el localStorage, por medio de forEach
+    const search = element => element.nombre === usuarioLoginValor;
+    console.log(`prueba find usuarioStorage`)
+    console.log(usuariosStorage.find(search));
+    let usuarioEncontrado = usuariosStorage.find(search);
+    console.log(`log de usuarioEncontrado`, usuarioEncontrado);
 
 
-// if reemplazado por ternario. validacion usuario y contrasenia
-usuarioEncontrado.contrasenia === contraseniaLoginValor ? 
-Swal.fire({
-    title: `Sesion iniciada correctamente, bienvenido ${usuarioEncontrado.nombre} !`,
-    timer: 2000,
-    timerProgressBar: true,
-    allowOutsideClick: true,
-    showConfirmButton: false,
-    
-}, setTimeout(function () {
-    window.location.href="../carrito.html"
-},2000))  
-: Swal.fire({
-    title: `Intente nuevamente, los valores no coinciden`,
-    timer: 2000,
-    timerProgressBar: true,
-    allowOutsideClick: true,
-    showConfirmButton: false
+    // if reemplazado por ternario. validacion usuario y contrasenia
+    usuarioEncontrado.contrasenia === contraseniaLoginValor ?
+        Swal.fire({
+            title: `Sesion iniciada correctamente, bienvenido ${usuarioEncontrado.nombre} !`,
+            timer: 2000,
+            timerProgressBar: true,
+            allowOutsideClick: true,
+            showConfirmButton: false,
+
+        }, setTimeout(function () {
+            window.location.href = "../carrito.html"
+        }, 2000)) :
+        Swal.fire({
+            title: `Intente nuevamente, los valores no coinciden`,
+            timer: 2000,
+            timerProgressBar: true,
+            allowOutsideClick: true,
+            showConfirmButton: false
+        });
+
+
 });
-
-
-});
-
-
-
-
